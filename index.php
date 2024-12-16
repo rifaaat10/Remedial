@@ -1,10 +1,21 @@
+<?php
+session_start();
+
+if ($_SESSION['status'] ='login') {
+echo "<script>
+
+
+</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Galeri Foto</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -15,33 +26,19 @@
     </button>
     <div class="collapse navbar-collapse mt-2" id="navbarNavAltMarkup">
       <div class="navbar-nav me-auto">
-
+<a href="album.php" class="nav-link">album</a>
+<a href="foto.php" class="nav-link">foto</a>
       </div>
-      <a href="register.php" class="btn btn-outline-primary m-1">daftar</a>
-      <a href="login.php" class="btn btn-outline-success m-1">masuk</a>
+      <a href="../config/aksi_logout.php" class="btn btn-outline-danger m-1">keluar</a>
     </div>
   </div>
 </nav>
 
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="card">
-        <img src=""class="card-img-top" title="" style="height: 12rem;">
-          <div class="card-footer text-center">
-        <a herf="">56jt triliun suka</a>
-        <a herf="">3 komentar</a>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
-
   <footer class="d-flex justify-content-center border-top mt-3 bg-light fixed-bottom">
-    <p>&copy; UKK RPL 2024 | RIFAT</p>
+    <p>&copy; UKK RPL 2024 | RIFAT<p>
   </footer>
 
     
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
